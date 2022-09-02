@@ -1,0 +1,162 @@
+﻿{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+Todo el grid de la manera mas ordenada posible
+*/
+
+.contenedor {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 20%;
+    grid-template-rows: 15% 5% auto 5%;
+    grid-template-areas:
+        "mycab mycab mycab mycab"
+        "mynav mynav mynav mynav"
+        "mymain mymain mymain myaside"
+        "pie pie pie pie";
+    justify-content: stretch;
+    column-gap: 1%;
+    row-gap: 3%;
+    background-color: #000000;
+    padding: 1%;
+    margin: 2%;
+}
+
+/*-----------------CABERCERA---------------------*/
+header {
+    grid-area: mycab;
+    background-color: #00517D;
+    background-image: url("Galeria/LOL.jpg");
+    background-size: auto 70%;
+    background-repeat: no-repeat;
+    background-position: 25% 50%;
+}
+
+    header h1 {
+        margin: 5%;
+        text-align: center;
+    }
+
+/*-----------------NAV---------------------*/
+nav {
+    grid-area: mynav;
+    background-color: #5E2457;
+}
+
+/*-----------------MAIN---------------------*/
+main {
+    grid-area: mymain;
+    background-color: #D1BB2E;
+}
+
+/*-----------------ASIDE---------------------*/
+aside {
+    grid-area: myaside;
+    padding: 5%;
+    background-color: rgb(128, 35, 43);
+}
+
+    aside h2 {
+        text-align: center;
+    }
+
+    aside h3 {
+        text-align: center;
+        color: #1e2221;
+        text-decoration: underline;
+    }
+
+    aside ul {
+        background: #602728;
+        padding: 20px;
+        list-style-position: inside;
+        list-style-type: none;
+    }
+
+ul li {
+    background: #fae3d7;
+    padding: 5px;
+    margin: 5px;
+    border-left: 10px solid #78281f;
+}
+
+aside img {
+    padding-top: 5%;
+    max-width: 100%;
+    height: auto;
+}
+/*-------Article Clases--------*/
+.clases {
+    margin: 2%;
+    background-color: rgb(196, 172, 172);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: stretch;
+}
+
+    .clases > article {
+        margin: 2%;
+        padding: 2%;
+        text-align: center;
+        background-color: white;
+    }
+
+        .clases > article > h1 {
+            margin: 2%;
+        }
+
+        .clases > article > img {
+            margin: 5%;
+            max-width: 50%;
+            height: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+/*-------Article galeria--------*/
+.galeria {
+    background-color: rgb(196, 172, 172);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    align-items: stretch;
+    gap: 5px;
+    margin: 1%;
+    padding: 1%;
+    /* margin: 2%;*/
+}
+
+    .galeria img {
+        border: #2196f3;
+        max-width: 100%;
+    }
+
+    .galeria :first-child {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+/*-----------------FOOTER---------------------*/
+footer {
+    grid-area: pie;
+    background-color: #a19999;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 75px auto auto 100px;
+        grid-template-areas:
+            "mycab"
+            "mynav"
+            "myaside"
+            "mymain"
+            "pie";
+        justify-content: stretch;
+    }
+}
