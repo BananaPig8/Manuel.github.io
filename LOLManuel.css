@@ -5,9 +5,6 @@
     padding: 0;
 }
 
-/*
-Todo el grid de la manera mas ordenada posible
-*/
 
 .contenedor {
     height: 100vh;
@@ -51,7 +48,7 @@ nav {
 /*-----------------MAIN---------------------*/
 main {
     grid-area: mymain;
-    background-color: #D1BB2E;
+    background-color: #D1BB2A;
 }
 
 /*-----------------ASIDE---------------------*/
@@ -90,7 +87,7 @@ aside img {
     max-width: 100%;
     height: auto;
 }
-/*-------Article Clases--------*/
+/*-------Clases--------*/
 .clases {
     margin: 2%;
     background-color: rgb(196, 172, 172);
@@ -118,7 +115,7 @@ aside img {
             margin-left: auto;
             margin-right: auto;
         }
-/*-------Article galeria--------*/
+/*-------Galeria--------*/
 .galeria {
     background-color: rgb(196, 172, 172);
     display: grid;
@@ -127,7 +124,6 @@ aside img {
     gap: 5px;
     margin: 1%;
     padding: 1%;
-    /* margin: 2%;*/
 }
 
     .galeria img {
